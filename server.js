@@ -98,6 +98,23 @@ app.post("/login", (req, res) => {
             });
         }
     });
+})
+.get("/get-books", (req, res) => {
+    conn.connect(err => {
+        if (err) {
+            console.error(err);
+            res.sendStatus(500);
+        } else {
+            conn.query("select * from books", (err, result) => {
+                if (err) {
+                    console.error(err);
+                    res.sendStatus(500);
+                } else {
+                    res.send(result).status(200);
+                }
+            });
+        }
+    });
 });
 
 app.listen(PORT, () => {

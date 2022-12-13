@@ -1,3 +1,7 @@
+html, body {
+    justify-content: center;
+}
+
 .box-container {
     background-color: var(--primary-color);
     padding: 1rem;
@@ -31,7 +35,7 @@
             .input-field:focus {
                 outline: 2px solid var(--outline-hover);
             }
-            .submit-btn {
+            /* .submit-btn {
                 border: none;
                 outline: 2px solid rgb(64, 64, 64);
                 padding: .5rem 1.5rem;
@@ -50,4 +54,4 @@
             }
             .submit-btn:focus {
                 outline: 2px solid var(--outline-hover);
-            }
+            } */
