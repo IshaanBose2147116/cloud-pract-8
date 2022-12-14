@@ -35,23 +35,3 @@ html, body {
             .input-field:focus {
                 outline: 2px solid var(--outline-hover);
             }
-            /* .submit-btn {
-                border: none;
-                outline: 2px solid rgb(64, 64, 64);
-                padding: .5rem 1.5rem;
-                border-radius: 10px;
-                background-color: var(--button-bg);
-                font-weight: bold;
-                transition: all .2s;
-            }
-            .submit-btn:hover {
-                cursor: pointer;
-                background-color: var(--button-bg-hover);
-                outline: 2px solid black;
-            }
-            .submit-btn:active {
-                outline: 2px solid var(--outline-hover);
-            }
-            .submit-btn:focus {
-                outline: 2px solid var(--outline-hover);
-            } */

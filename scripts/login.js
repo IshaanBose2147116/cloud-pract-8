@@ -27,7 +27,9 @@ loginButton.onclick = () => {
             headers: { "Content-Type" : "application/json" }
         }).then(response => {
             if (response.status === 200) {
-                window.location.replace(`${ PAGE_URL }?user=${ email }`);
+                response.json().then(data => {
+                    window.location.replace(`${ PAGE_URL }?user=${ email }&id=${ data.id }`);
+                })
             } else {
                 alert("Invalid email or password!");
             }
