@@ -122,7 +122,7 @@ function displayBookData() {
     for (let i = 0; i < currData.length; i++) {
         document.getElementById(`checkout-${ currData[i].book_id }`).onclick = () => {
             const currDate = new Date();
-            const timestamp = `${ currDate.getFullYear() }-${ currDate.getMonth() + 1 }-${ currDate.getDate() } ${ currDate.getHours() }:${ currDate.getMinutes() }:${ currDate.getSeconds() }`;
+            const timestamp = `${ currDate.getUTCFullYear() }-${ currDate.getUTCMonth() + 1 }-${ currDate.getUTCDate() } ${ currDate.getUTCHours() }:${ currDate.getUTCMinutes() }:${ currDate.getUTCSeconds() }`;
             fetch(`${ PAGE_URL }checkout/${ currData[i].book_id }`, {
                 method: 'POST',
                 body: JSON.stringify({
@@ -168,7 +168,7 @@ function displayCheckouts() {
 
     for (let i = 0; i < currData.length; i++) {
         let date = new Date(currData[i].timestamp);
-        date = `${ date.getFullYear() }-${ date.getMonth() + 1 }-${ date.getDate() } ${ date.getHours() }:${ date.getMinutes() }:${ date.getSeconds() }`;
+        date = `${ date.getUTCFullYear() }-${ date.getUTCMonth() + 1 }-${ date.getUTCDate() } ${ date.getUTCHours() }:${ date.getUTCMinutes() }:${ date.getUTCSeconds() }`;
 
         document.getElementById(`return-${ date }`).onclick = () => {
             fetch(`${ PAGE_URL }return/${ date }`, { 
